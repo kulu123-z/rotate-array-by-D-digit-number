@@ -1,0 +1,30 @@
+//this program take extra d space but program execue in linear time
+#include<iostream>
+
+using namespace std;
+
+int main(){
+    int arr[]={1,2,3,4,5};
+    int d=3;
+    
+    int a[d];
+    
+    for(int i=0;i<d;i++){
+        a[i]=arr[i];
+    }
+    
+    int in=0;
+    for(int i=d;i<5;i++){
+        arr[in]=arr[i];
+        in++;
+    }
+    
+    for(int i=0;i<d;i++){
+        arr[in] = a[i];
+        in++;
+    }
+    
+    for(int i=0;i<5;i++){
+        cout<<arr[i]<<" ";
+    }
+}
